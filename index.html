@@ -64,12 +64,31 @@
       color: hsl(216, 15%, 48%);
       font-size: 1rem;
     }
+
+    .animate {
+      animation-duration: 0.4s;
+      animation-name: animate-slide-up;
+      animation-delay: 0.25s;
+      animation-fill-mode: backwards;
+    }
+
+    @keyframes animate-slide-up {
+      0% { 
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      100% { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   </style>
 </head>
 <body>
   
   <main>
-    <div class="card">
+    <div class="card animate">
       <img src="images/image-qr-code.png" alt="qr-code" class="card-qr-code">
 
       <div class="card-text-container">
